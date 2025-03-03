@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman</h1>
+        <h4>Try to guess some words in French</h4>
+        <h4>Good Luck!</h4>
+
+        <div id="wordDisplay"></div>
+        <div id="alphabetDisplay"></div>
+        <div id="triesDisplay">Tries Left: 5</div>
+        <div id="message"></div>
+        <div id="hangmanDisplay" class="hangman"></div>
+        <button id="playButton">Play</button>
+    </div>
+
+    <script src="src/dico.js"></script>
+    <script src="src/index.js"></script>
+</body>
+</html>
