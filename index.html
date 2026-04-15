@@ -964,9 +964,23 @@ const THEMES = {
   retro:     { label:"HANGMAN", icon:"gamepad",          lifeOnCls:"fa-solid fa-square",      lifeOffCls:"fa-regular fa-square" },
 };
 
+const THEME_KEYS = Object.keys(THEMES);
+
+function pickRefreshTheme(){
+  if(!THEME_KEYS.length) return "futuristic";
+  if(THEME_KEYS.length === 1) return THEME_KEYS[0];
+
+  const prev = window.sessionStorage.getItem("lastTheme");
+  const candidates = prev ? THEME_KEYS.filter(t => t !== prev) : THEME_KEYS;
+  const next = candidates[Math.floor(Math.random() * candidates.length)] || "futuristic";
+
+  window.sessionStorage.setItem("lastTheme", next);
+  return next;
+}
+
 const PARTS = ["p0","p1","p2","p3","p4","p5","p6","p7","p8","p9"];
 const MAX = 10;
-let word="", guessed=new Set(), wrong=0, lang="en", theme="futuristic", over=false;
+let word="", guessed=new Set(), wrong=0, lang="en", theme=pickRefreshTheme(), over=false;
 
 // ── STARS ──
 (()=>{
@@ -1088,6 +1102,8 @@ function setTheme(t){
   const cfg = THEMES[t] || THEMES.futuristic;
   const iconHtml = cfg.icon ? `<i class="fa-solid fa-${cfg.icon}"></i> ` : '';
   document.getElementById("gtitle").innerHTML = iconHtml + cfg.label;
+  const themeSelect = document.getElementById("tsel");
+  if(themeSelect && themeSelect.value !== t) themeSelect.value = t;
   renderLives(); renderKB();
 }
 
