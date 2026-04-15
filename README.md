@@ -1,25 +1,59 @@
-# Hangman Game
+# Hangman
 
-## Description
-This project is a simple Hangman game implemented in JavaScript. The game allows players to guess letters in a hidden word, with a maximum of five incorrect guesses allowed. The game includes a user-friendly interface and provides feedback on the player's progress.
+Modern, theme-rich Hangman game built with plain HTML, CSS, and JavaScript.
 
-## Files
-- **src/index.js**: Contains the main logic for the Hangman game, including functions for resetting the game, creating the alphabet, generating the word to guess, searching for letters, revealing letters, checking for victory, and revealing the word.
-- **src/dico.js**: Contains a list of words that can be used in the Hangman game. It exports an array of words that the game can randomly select from.
-- **src/styles/styles.css**: Contains the styles for the Hangman game, defining the appearance of the game elements such as the word display, buttons, and messages.
-- **index.html**: The main HTML document for the project. It includes the structure of the game interface, links to the CSS file for styling, and the JavaScript files for functionality.
+## Overview
 
-## How to Play
-1. Open the `index.html` file in a web browser.
-2. Click the "Play" button to start a new game.
-3. The hidden word will be displayed as dashes (e.g., "_ _ _ _").
-4. Click on the letters of the French alphabet to make guesses.
-5. You have a maximum of five incorrect guesses. If you guess a letter that is not in the word, you will lose one try.
-6. If you reveal all the letters in the word before running out of tries, you win! If you run out of tries, the game is over.
-7. After the game ends, you can click the "Play" button to start a new game.
+This project runs entirely in the browser with no build step and no framework. The current version is a single-page implementation with animated visuals, multiple languages, and keyboard support.
 
-## Setup
-To set up the project, simply clone the repository and open the `index.html` file in your web browser. No additional setup is required.
+## Highlights
 
-## License
-This project is open-source and available for anyone to use and modify. Enjoy playing Hangman!
+- 7 themes: Futuristic, Cute, Classic, Pirate, Space, Minimal, Retro
+- 5 languages: English, French, Spanish, Russian, Georgian
+- Animated SVG gallows and character drawing
+- On-screen keyboard plus physical keyboard input
+- Responsive UI for desktop and mobile
+- Instant restart with New Game
+
+## Quick Start
+
+1. Clone the repository.
+2. Open index.html directly in a browser.
+
+Optional local server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit http://localhost:8000.
+
+## Gameplay
+
+1. Choose a theme and language.
+2. Guess letters to reveal the hidden word.
+3. Wrong guesses add one hangman part.
+4. Reach 10 wrong guesses and the game ends.
+5. Reveal all letters before that to win.
+
+## Controls
+
+- Mouse or touch: click letters on the virtual keyboard
+- Physical keyboard: type letters directly
+- Restart: click New Game
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Font Awesome icons
+- Google Fonts
+
+## Project Layout
+
+- index.html: Active game app (UI, styles, logic, dictionaries)
+
+## Notes For Contributors
+
+- The playable production version is currently contained in index.html.
