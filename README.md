@@ -1,59 +1,28 @@
 # Hangman
 
-Modern, theme-rich Hangman game built with plain HTML, CSS, and JavaScript.
+A single-file browser Hangman game with multiple visual themes.
 
-## Overview
+## How to Play
 
-This project runs entirely in the browser with no build step and no framework. The current version is a single-page implementation with animated visuals, multiple languages, and keyboard support.
+1. Open `index.html` in any modern browser — no install or server needed.
+2. Guess the hidden word one letter at a time by clicking the on-screen keyboard.
+3. You have a limited number of lives. Each wrong guess costs one life.
+4. Win by revealing the full word before running out of lives.
 
-## Highlights
+## Themes
 
-- 7 themes: Futuristic, Cute, Classic, Pirate, Space, Minimal, Retro
-- 5 languages: English, French, Spanish, Russian, Georgian
-- Animated SVG gallows and character drawing
-- On-screen keyboard plus physical keyboard input
-- Responsive UI for desktop and mobile
-- Instant restart with New Game
+Switch between 7 themes from the settings panel:
 
-## Quick Start
+| Theme | Vibe |
+|-------|------|
+| Futuristic | Dark cyan glow |
+| Cute | Soft pink & pastel |
+| Classic | Chalkboard green |
+| Pirate | Dark gold & parchment |
+| Space | Deep purple cosmos |
+| Minimal | Clean light mode |
+| Retro | Green-on-black terminal |
 
-1. Clone the repository.
-2. Open index.html directly in a browser.
+## Tech
 
-Optional local server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit http://localhost:8000.
-
-## Gameplay
-
-1. Choose a theme and language.
-2. Guess letters to reveal the hidden word.
-3. Wrong guesses add one hangman part.
-4. Reach 10 wrong guesses and the game ends.
-5. Reveal all letters before that to win.
-
-## Controls
-
-- Mouse or touch: click letters on the virtual keyboard
-- Physical keyboard: type letters directly
-- Restart: click New Game
-
-## Tech Stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Font Awesome icons
-- Google Fonts
-
-## Project Layout
-
-- index.html: Active game app (UI, styles, logic, dictionaries)
-
-## Notes For Contributors
-
-- The playable production version is currently contained in index.html.
+Plain HTML, CSS, and JavaScript — no frameworks, no dependencies, no build step.
